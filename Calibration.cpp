@@ -37,6 +37,7 @@ BEGIN_MESSAGE_MAP(CCalibration, CDialogEx)
 	ON_BN_CLICKED(IDOK, &CCalibration::OnBnClickedOk)
 	ON_BN_CLICKED(IDC_cal2, &CCalibration::OnBnClickedcal2)
 	ON_BN_CLICKED(IDC_dat2, &CCalibration::OnBnClickeddat2)
+	ON_NOTIFY(LVN_ITEMCHANGED, IDC_CalList, &CCalibration::OnLvnItemchangedCallist)
 END_MESSAGE_MAP()
 
 
@@ -175,3 +176,11 @@ void CCalibration::OnBnClickeddat2()
 }
 
 
+
+
+void CCalibration::OnLvnItemchangedCallist(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
+	// TODO: 在此添加控件通知处理程序代码
+	*pResult = 0;
+}

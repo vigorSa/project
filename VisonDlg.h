@@ -85,6 +85,9 @@ public:
 	void AdjustHBlanking();
 	/// 获取图像大小
 	void GetImageSize();
+
+	CListCtrl m_RepoterList;
+	void InitReporter();
 	void InitParamFromINI();
 	void SaveParamToINI();
 	void DecodeImage();
@@ -280,6 +283,8 @@ public:
 
 	afx_msg void OnBnClickedyes();
 	afx_msg void OnBnClickedno();
+	
+	afx_msg void OnBnClickedBtnNotest();
 };
 
 #endif

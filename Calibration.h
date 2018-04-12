@@ -38,4 +38,5 @@ public:
 	afx_msg void OnBnClickedcal2();
 	afx_msg void OnBnClickeddat2();
 	
+	afx_msg void OnLvnItemchangedCallist(NMHDR *pNMHDR, LRESULT *pResult);
 };
